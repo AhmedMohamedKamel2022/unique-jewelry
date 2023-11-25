@@ -1,11 +1,74 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+.checked {
+	color: orange;
+}
+
+.box {
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+	gap: 17.5px;
+}
+
+.box img {
+	width: 100%;
+}
+
+.box img:hover {
+	cursor: pointer;
+	opacity: 0.95;
+}
+
+.box h2 {
+	font-size: 20px;
+}
+
+.box p {
+	padding: 0 20px;
+	font-size: 12.5px;
+	line-height: 1.35;
+	color: var(--gray-color);
+}
+
+.box span {
+	font-weight: 800;
+	font-size: 18px;
+}
+
+.box .rate {
+	color: #ffb900;
+	font-size: 12px;
+}
+
+.box .options {
+	margin-bottom: 25px;
+}
+
+.box .options a {
+	color: white;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 12px;
+	border-radius: 50px;
+}
+
+.box .options a:hover {
+	background-color: var(--secondary-color);
+}
+
+
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3208,7 +3271,7 @@ input, select, textarea {
 			}
 
 		.pagination a.active {
-			background-color: #eeeeee;
+			background-color: slategray;
 		}
 
 	.pagination span {
