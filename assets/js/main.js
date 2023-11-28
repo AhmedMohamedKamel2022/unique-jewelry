@@ -255,7 +255,7 @@
 
 		}
 		const counts = document.querySelectorAll('.count')
-		const speed = 97
+		const speed = 300
 		
 		counts.forEach((counter) => {
 			function upDate(){
