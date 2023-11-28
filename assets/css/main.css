@@ -2,6 +2,142 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
 
+.counter-wrapper{
+    /* background: url(img/success2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-position: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1.5rem;
+    padding: 10rem 9%;
+    margin-top: 5rem;
+    position: relative;
+}
+.counter-wrapper::before{
+    position: absolute;
+    content: '';
+    content: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: plum;
+    z-index: 1;
+}
+.counter{
+   text-align: center;   
+   color: #ddd;
+   z-index: 2;
+   position: relative;
+}
+.counter::before{
+    position: absolute;
+    content: '';
+    bottom: -2rem;
+    left: 50%;
+    width: 20%;
+    height: .2rem;
+    background: #4DB7FE;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.counter .count{
+    font-size: 5rem;
+    margin-bottom: 1rem;    
+}
+.counter p{
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    font-family: 'poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+.wrapper h1{
+    font-size: 3em;
+
+    margin: 25px;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    margin: 10px 4px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+.card i{
+    margin: 20px;
+    color: #581ed6;
+}
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: black;
+	font-weight: 500;
+    text-align: center;
+}
+.card:hover i,
+.card:hover p{
+	font-weight: 500;
+    color: black;
+}
+.card:hover h2{
+    font-weight: 600;
+}
+.card:nth-child(1):hover{
+    background: linear-gradient(45deg, #2e7c92 20% ,#ffffff )                                 
+}
+
+.card:nth-child(2):hover{
+	background: linear-gradient(45deg, #2e7c92 20% ,#ffffff )                                 
+}
+
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg, #2e7c92 20% ,#ffffff )                                 
+}
+
+
+
+
+
+
 .checked {
 	color: orange;
 }
@@ -3870,7 +4006,7 @@ input, select, textarea {
 			@media screen and (max-width: 736px) {
 
 				#main > .post {
-					padding: 4rem 2rem 2rem 2rem ;
+					/* padding: 4rem 2rem 2rem 2rem ;z */
 				}
 
 					#main > .post header.major > .date {
