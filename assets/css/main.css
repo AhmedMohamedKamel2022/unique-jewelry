@@ -2,11 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
 
+
 .counter-wrapper{
-    /* background: url(img/success2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-position: center; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 1.5rem;
@@ -132,7 +129,9 @@
 .card:nth-child(3):hover{
     background: linear-gradient(45deg, #2e7c92 20% ,#ffffff )                                 
 }
-
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg, #2e7c92 20% ,#ffffff )                                 
+}
 
 
 
