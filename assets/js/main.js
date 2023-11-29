@@ -254,21 +254,40 @@
 			});
 
 		}
-		const counts = document.querySelectorAll('.count')
-		const speed = 400
-		
-		counts.forEach((counter) => {
-			function upDate(){
-				const target = Number(counter.getAttribute('data-target'))
-				const count = Number(counter.innerText)
-				const inc = target / speed        
-				if(count < target){
-					counter.innerText = Math.floor(inc + count) 
-					setTimeout(upDate, 15)
-				}else{
-					counter.innerText = target
-				}
-			}
-			upDate()
-		})
+		const counters = document.querySelectorAll('.count');
+        const speed = 100;
+
+        function startCounting(element, target) {
+            let count = 0;
+
+            function update() {
+                const inc = target / speed;
+                if (count < target) {
+                    element.innerText = Math.floor(inc + count) + "+" ;
+                    count += inc;
+                    requestAnimationFrame(update);
+                } else {
+                    element.innerText = target + "+";
+                }
+            }
+
+            update();
+        }
+
+        function handleIntersection(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = Number(entry.target.querySelector('.count').getAttribute('data-target'));
+                    startCounting(entry.target.querySelector('.count'), target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
+
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+        counters.forEach(counter => {
+            observer.observe(counter.parentElement);
+        });
 })(jQuery);
