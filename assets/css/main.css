@@ -2,6 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
 
+@keyframes typing {
+	from { width: 0; }
+	to { width: 100%; }
+}
+
+.typewriter-text {
+	overflow: hidden;
+	border-right: 2px solid white;
+	white-space: nowrap;
+	margin: 0 auto;
+	font-size: 24px;
+}
+
 
 .counter-wrapper{
     display: grid;
