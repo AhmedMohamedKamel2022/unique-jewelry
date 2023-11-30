@@ -290,4 +290,22 @@
         counters.forEach(counter => {
             observer.observe(counter.parentElement);
         });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+            const text = "Habiba Waheed";
+            let index = 0;
+            let animatedText = document.getElementById('animated-text');
+
+            function type() {
+                animatedText.textContent += text[index];
+                index++;
+                if (index < text.length) {
+                    setTimeout(type, 200); // Adjust the speed of typing
+                }
+            }
+
+            type();
+        });
+
 })(jQuery);
