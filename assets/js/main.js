@@ -292,20 +292,28 @@
         });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-            const text = "Habiba Waheed";
-            let index = 0;
-            let animatedText = document.getElementById('animated-text');
-
-            function type() {
-                animatedText.textContent += text[index];
-                index++;
-                if (index < text.length) {
-                    setTimeout(type, 200); // Adjust the speed of typing
-                }
-            }
-
-            type();
-        });
+		document.addEventListener('DOMContentLoaded', function () {
+			const text = "Habiba Waheed";
+			let index = 0;
+			let animatedText = document.getElementById('animated-text');
+		
+			function type() {
+				animatedText.textContent += text[index];
+				index++;
+				if (index < text.length) {
+					setTimeout(type, 200); // Adjust the speed of typing
+				} else {
+					// If reached the end of the text, reset index and clear animatedText
+					setTimeout(function () {
+						animatedText.textContent = '';
+						index = 0;
+						type();
+					}, 1000); // Adjust the delay before restarting the typing
+				}
+			}
+		
+			type();
+		});
+		
 
 })(jQuery);
